@@ -9,15 +9,15 @@ Para preservar la privacidad de la empresa, se omitirá toda la información con
 ## Datos
 Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Julio de 2020. Los datos se almacenan en un diccionario, cada sección tiene su entrada en el diccionario con un DataFrame dónde se pueden encontrar los valores de cada una de las variables de la sección.
 
-1. *general*
-2. *S1*
-3. *S2*
-4. *S3*
-5. *S4*
-6. *S5*
-7. *S6a*
-8. *S6b*
-9. *S6c*
-10. *S7a*
-11. *S7b*
-12. *S7c*
+1. general
+2. S1
+3. S2
+4. S3
+5. S4
+6. S5
+7. S6a
+8. S6b
+9. S6c
+10. S7a
+11. S7b
+12. S7c
