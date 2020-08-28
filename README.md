@@ -7,7 +7,7 @@ Este proyecto se basa en los datos reales de un tren de laminación de una empre
 Para preservar la privacidad de la empresa, se omitirá toda la información considerada confidencial para poder cumplir con la legislación vigente en materia de protección de datos. Se han cambiado los nombres de las variables y no se entrará en detalle de cada una de las secciones que conforman el tren de laminación.
 
 ## Datos
-Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Julio de 2020 incluye datos de más de 4000 barras producidas. Los datos se almacenan en un diccionario, cada sección tiene su entrada en el diccionario con un DataFrame dónde se pueden encontrar los valores de cada una de las variables de la sección.
+Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Julio de 2020 incluye datos de más de 4000 barras producidas. Los datos se almacenan en un diccionario, cada sección tiene su entrada en el diccionario con un DataFrame dónde se pueden encontrar los valores de cada una de las variables de la sección. La estructura del diccionario y las columnas de los DataFrames son los siguientes:
 
 - **general**:
   - weight
