@@ -10,7 +10,7 @@ Para preservar la privacidad de la empresa, se omitirá toda la información con
 Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Julio de 2020. Los datos se almacenan en un diccionario, cada sección tiene su entrada en el diccionario con un DataFrame dónde se pueden encontrar los valores de cada una de las variables de la sección.
 
 - **general**:
- - weight
+  - weight
  - id_colada
  - lenght
  - material
