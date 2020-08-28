@@ -9,7 +9,20 @@ Para preservar la privacidad de la empresa, se omitirá toda la información con
 ## Datos
 Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Julio de 2020. Los datos se almacenan en un diccionario, cada sección tiene su entrada en el diccionario con un DataFrame dónde se pueden encontrar los valores de cada una de las variables de la sección.
 
-- **general**
+- **general**:
+ - weight
+ - id_colada
+ - lenght
+ - material
+ - id_barra
+ - calidad
+ - diametro
+ - timestamp_millis
+ - tipo_fallo
+ - timestamp_barra
+ - patron_enfriamiento
+ - id_rollo
+ - linea
 - **S1**
 - **S2**
 - **S3**
