@@ -40,12 +40,83 @@ Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Jul
   - temperatura_salida
   - temperatura_aire
 - **S2**
+  - velocidad1
+  - corriente1
+  - velocidad2
+  - corriente2
+  - velocidad3
+  - corriente3
+  - velocidad4
+  - corriente4
+  - temperatura
 - **S3**
+  - temperatura1
+  - temperatura2
+  - voltaje1
+  - potencia1
+  - voltaje2
+  - potencia2
+  - voltaje3
+  - potencia3
+  - voltaje4
+  - potencia4
 - **S4**
+  - velocidad1
+  - corriente1
+  - velocidad2
+  - corriente2
+  - velocidad3
+  - corriente3
+  - velocidad4
+  - corriente4
+  - velocidad5
+  - corriente5
+  - velocidad6
+  - corriente6
+  - velocidad7
+  - corriente7
+  - temperatura
 - **S5**
+  - velocidad1
+  - corriente1
+  - velocidad2
+  - corriente2
+  - velocidad3
+  - presion3_inf
+  - presion3_sup
+  - corriente3
+  - caudal3_sup
+  - caudal3_inf
+  - presion4
+  - corriente4
+  - caudal4_sup
+  - caudal4_inf
+  - velocidad4
 - **S6a**
+  - factor_reduccion
+  - velocidad
+  - orden_formador_lazo
+  - altura_bucle
+  - corriente
 - **S6b**
+  - factor_reduccion
+  - velocidad
+  - orden_formador_lazo
+  - altura_bucle
+  - corriente
 - **S6c**
+  - factor_reduccion
+  - velocidad
+  - orden_formador_lazo
+  - altura_bucle
+  - corriente
 - **S7a**
+  - orden_formador_lazo
+  - altura_bucle
+  - corriente
 - **S7b**
+  - corriente
+  - velocidad
 - **S7c**
+  - corriente
+  - velocidad
