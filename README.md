@@ -6,3 +6,4 @@ Este proyecto se basa en los datos reales de un tren de laminación de una empre
 
 Para preservar la privacidad de la empresa, se omitirá toda la información considerada confidencial para poder cumplir con la legislación vigente en materia de protección de datos. Se han cambiado los nombres de las variables y no se entrará en detalle de cada una de las secciones que conforman el tren de laminación.
 
+## Datos
