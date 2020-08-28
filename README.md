@@ -12,3 +12,12 @@ Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Jul
 1. *general*
 2. *S1*
 3. *S2*
+4. *S3*
+5. *S4*
+6. *S5*
+7. *S6a*
+8. *S6b*
+9. *S6c*
+10. *S7a*
+11. *S7b*
+12. *S7c*
