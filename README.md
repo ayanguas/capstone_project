@@ -24,6 +24,21 @@ Para este proyecto tenemos datos desde el 01 de Enero de 2020 hasta el 27 de Jul
   - id_rollo
   - linea
 - **S1**
+  - presion1
+  - presion_aire
+  - presion_oxigeno
+  - temperatura1
+  - temperatura2
+  - temperatura3
+  - temperatura4
+  - temperatura5
+  - temperatura6
+  - temperatura7
+  - temperatura8
+  - temperatura9
+  - temperatura10
+  - temperatura_salida
+  - temperatura_aire
 - **S2**
 - **S3**
 - **S4**
