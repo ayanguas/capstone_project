@@ -12,7 +12,7 @@ from dash import callback_context
 import dash_bootstrap_components as dbc
 
 from app import app
-from layouts import home_layout, kpis_layout, casetas_layout
+from layouts import home_layout, root_layout
 import callbacks
 from handlers import get_params, dark
 
@@ -33,17 +33,15 @@ navbar = dbc.Navbar([
     dbc.Nav([
         dbc.NavItem(dbc.NavLink("Home", href="/home",
                                 style={"color": colors['text']})),
-        dbc.NavItem(dbc.NavLink("KPIs", href="/kpis",
+        dbc.NavItem(dbc.NavLink("Root Cause", href="/root",
                                 style={"color": colors['text']},
                                 id='report_page_nav')),
-        dbc.NavItem(dbc.NavLink("Casetas", href="/casetas",
-                                style={"color": colors['text']},
-                                id='comparativas_page_nav')),
     ], className=''),
 ], className='lg py-1 px-1', color=colors['navbar'], style={"height": '5vh'})
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
+    dcc.Store(id='store-id'),
     navbar,
     html.Div(id='page-content', className='w-100', style={"height": '92vh'}),
     html.Footer([
@@ -58,12 +56,8 @@ app.layout = html.Div([
               [Input('url', 'pathname')])
 def display_page(pathname):
     """Return page layouts."""
-    if pathname == '/kpis':
-        return kpis_layout
-    elif pathname == '/casetas':
-        return casetas_layout
-    # elif pathname == '/kpis':
-    #     return kpis_layout
+    if pathname == '/root':
+        return root_layout
     else:
         return home_layout
 
