@@ -321,16 +321,16 @@ def calendar_heatmap(seccion):
 
 # Función que devuelve los traces y layout del histograma
 def histogram(seccion, column, id_data):
-    if id_data < 50:
+    if id_data is None:
+        id_data = 0
+    if id_data < 100:
         idx1 = 0
     else:
-        idx1 = id_data - 50
+        idx1 = id_data - 100
     df = data[seccion]
-    df = df.loc[idx1:id_data + 50, :]
+    df = df.loc[idx1:id_data + 100, :]
     # Datos historicos del histograma S1
     df_hist = data[seccion]
-    mean = df_hist[column].mean()
-    std = 2*df_hist[column].std()
     trace = dict(
         type="histogram",
         name='Historico',
@@ -398,48 +398,30 @@ def histogram(seccion, column, id_data):
                     width=4,
                 ),
             },
-            # {
-            #     'type': "line",
-            #     # 'xref':df[df['id']==id_data['id']][column].iloc[0],
-            #     'yref': 'paper',
-            #     'x0': mean - std,
-            #     'y0': 0,
-            #     'x1': mean - std,
-            #     'y1': 0.95,
-            #     'line': dict(
-            #         color=colors['plantplot-l-red'],
-            #         width=4,
-            #         dash="dashdot",
-            #     ),
-            # },
-            # {
-            #     'type': "line",
-            #     # 'xref':df[df['id']==id_data['id']][column].iloc[0],
-            #     'yref': 'paper',
-            #     'x0': mean + std,
-            #     'y0': 0,
-            #     'x1': mean + std,
-            #     'y1': 0.95,
-            #     'line': dict(
-            #         color=colors['plantplot-l-red'],
-            #         width=4,
-            #         dash="dashdot",
-            #     ),
-            # }
         ],
     )
     return dict(data=[trace, trace2], layout=layout)
 
 # Función que devuelve el trace y layout del gráfico de la señal
 def signal_plot(seccion, column, id_data):
+    if id_data is None:
+        id_data = 0
+    if id_data < 100:
+        idx1 = 0
+    else:
+        idx1 = id_data - 100
+    
     df = data[seccion]
+    df1 = df.loc[idx1:id_data + 100, :]
     df2 = data['general']
+    df2 = df2.loc[idx1:id_data + 100, :]
     mean = df[column].mean()
     std = 2*df[column].std()
+    
     # Signal Plot S1
     trace = dict(
         type="scatter",
-        y=df[column],
+        y=df1[column],
         x=df2['timestamp_barra'],
         line={"color": colors['signal-line']},
         mode="lines",
@@ -448,7 +430,7 @@ def signal_plot(seccion, column, id_data):
 
     trace2 = dict(
         type="scatter",
-        y=df.loc[id_data, :][column],
+        y=df1.loc[id_data, :][column],
         x=df2.loc[id_data, :]['timestamp_barra'],
         line={"color": colors['signal-marker']},
         mode="markers",
@@ -555,6 +537,8 @@ def dropdown_options(seccion):
 
 # Función que devuelve el texto que ira dentro del recuadro de información de la barra seleccionada page-2
 def text_info(seccion, column, id_data):
+    if id_data is None:
+        id_data = 0
     date = data['general'].loc[id_data, 'timestamp_barra']
     value = data[seccion].loc[id_data, column]
     mean = data[seccion].mean()

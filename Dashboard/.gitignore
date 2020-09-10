@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep 10 17:35:45 2020
+
+@author: Albert Yanguas - ayanguasrovira@gmail.com
+"""
+
+venv
+*.pyc
+.DS_Store
+.env
