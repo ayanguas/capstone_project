@@ -8,7 +8,6 @@ Created on Wed Jul  8 11:30:37 2020
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
-import dash_daq as daq
 from app import app
 import handlers as hdlr #get_params, dark
 import os
@@ -194,3 +193,21 @@ root_layout = html.Div([
 ], className='h-100')
 
 
+# Barra de navegacion de la aplicacion
+navbar = dbc.Navbar([
+    html.A(
+        # Imagen con el logo de Dattium que nos llevara a la página
+        # principal de la App
+        html.Img(src=app.get_asset_url(params['navbar_image']),\
+                                  height=params['navbar_logo_size']),
+        href="/home",
+        className='float-right col-2 h-100'
+    ),
+    dbc.Nav([
+        dbc.NavItem(dbc.NavLink("Home", href="/home",
+                                style={"color": colors['text']})),
+        dbc.NavItem(dbc.NavLink("Root Cause", href="/root",
+                                style={"color": colors['text']},
+                                id='report_page_nav')),
+    ], className=''),
+], className='lg py-1 px-1', color=colors['navbar'], style={"height": '5vh'})

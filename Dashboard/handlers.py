@@ -13,13 +13,12 @@ import plotly.graph_objs as go
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-import dash_daq as daq
 import pickle
 from datetime import date, timedelta, datetime
 
 dark = True
 
-data = pickle.load(open('../data/dashboard_data.pickle', 'rb'))
+data = pickle.load(open('assets/datos_trabajo_final.pickle', 'rb'))
 
 def get_params(dark):
     """Return app parameters"""

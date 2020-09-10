@@ -26,7 +26,10 @@ def change_iddata(click_data):
 @app.callback(Output('url', 'pathname'),
               [Input('plant-plot', 'clickData')])
 def change_page(click_data):
+    if click_data is not None:
         return '/root'
+    else:
+        return '/home'
 
 # Plant plot callback
 @app.callback(

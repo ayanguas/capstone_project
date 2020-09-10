@@ -11,33 +11,10 @@ from dash.dependencies import Input, Output
 from dash import callback_context
 import dash_bootstrap_components as dbc
 
-from app import app
-from layouts import home_layout, root_layout
+from app import app, server
+from layouts import home_layout, root_layout, navbar
 import callbacks
-from handlers import get_params, dark
-
-params = get_params(dark)
-
-colors = params['colors']
-
-# Barra de navegacion de la aplicacion
-navbar = dbc.Navbar([
-    html.A(
-        # Imagen con el logo de Dattium que nos llevara a la página
-        # principal de la App
-        html.Img(src=app.get_asset_url(params['navbar_image']),\
-                                  height=params['navbar_logo_size']),
-        href="/home",
-        className='float-right col-2 h-100'
-    ),
-    dbc.Nav([
-        dbc.NavItem(dbc.NavLink("Home", href="/home",
-                                style={"color": colors['text']})),
-        dbc.NavItem(dbc.NavLink("Root Cause", href="/root",
-                                style={"color": colors['text']},
-                                id='report_page_nav')),
-    ], className=''),
-], className='lg py-1 px-1', color=colors['navbar'], style={"height": '5vh'})
+# from handlers import get_params, dark
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
@@ -51,7 +28,6 @@ app.layout = html.Div([
     ], className='py-1', style={"height": '3vh'}),
 ])
 
-
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
@@ -60,7 +36,6 @@ def display_page(pathname):
         return root_layout
     else:
         return home_layout
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
